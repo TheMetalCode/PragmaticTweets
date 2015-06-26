@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell 'em you're building an iOS app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="no2-Bg-xfT">
-                                <rect key="frame" x="169" y="28" width="263" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="IOV-GH-Zft"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-bf-sdh">
                                 <rect key="frame" x="258" y="56" width="84" height="30"/>
                                 <state key="normal" title="Tweet It Out"/>
@@ -32,20 +23,38 @@
                                     <action selector="handleTweetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t99-pO-bIq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5F-WQ-vQp">
+                                <rect key="frame" x="248" y="20" width="104" height="30"/>
+                                <state key="normal" title="See My Tweets"/>
+                                <connections>
+                                    <action selector="handleShowMyTweetsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSD-fb-JHA"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdp-iZ-v13">
+                                <rect key="frame" x="0.0" y="94" width="600" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gdp-iZ-v13" firstAttribute="centerX" secondItem="JDv-bf-sdh" secondAttribute="centerX" id="2Fg-1O-0Op"/>
+                            <constraint firstItem="gdp-iZ-v13" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7au-Vk-hjG"/>
                             <constraint firstItem="JDv-bf-sdh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HIX-pm-FfF"/>
-                            <constraint firstItem="no2-Bg-xfT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NdC-pd-9dr"/>
-                            <constraint firstItem="JDv-bf-sdh" firstAttribute="top" secondItem="no2-Bg-xfT" secondAttribute="bottom" constant="7" id="bAj-NY-S6O"/>
-                            <constraint firstItem="no2-Bg-xfT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="dXJ-5p-ZX3"/>
+                            <constraint firstItem="gdp-iZ-v13" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="RcX-lH-chW"/>
+                            <constraint firstItem="W5F-WQ-vQp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SLY-Kb-EYz"/>
+                            <constraint firstItem="gdp-iZ-v13" firstAttribute="top" secondItem="JDv-bf-sdh" secondAttribute="bottom" constant="8" symbolic="YES" id="UZB-Gf-9wG"/>
+                            <constraint firstItem="JDv-bf-sdh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="Xvr-4f-CTX"/>
                             <constraint firstItem="JDv-bf-sdh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbV-hN-d9T"/>
-                            <constraint firstItem="no2-Bg-xfT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zhg-RP-1ly"/>
+                            <constraint firstItem="W5F-WQ-vQp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0j-Fb-bwd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="twitterWebView" destination="gdp-iZ-v13" id="R2y-El-dzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="186" y="290"/>
         </scene>
     </scenes>
 </document>
