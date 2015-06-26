@@ -192,6 +192,7 @@
 				TargetAttributes = {
 					5F9602DD1B3CB98E00554893 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = W826M2H9SE;
 					};
 					5F9602F11B3CB98E00554893 = {
 						CreatedOnToolsVersion = 7.0;
@@ -398,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PragmaticTweets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pragprog.themetalcode.PragmaticTweets;
@@ -409,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PragmaticTweets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pragprog.themetalcode.PragmaticTweets;
