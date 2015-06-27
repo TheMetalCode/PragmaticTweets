@@ -14,6 +14,7 @@
 		5F9602EC1B3CB98E00554893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9602EA1B3CB98E00554893 /* LaunchScreen.storyboard */; };
 		5F9602F71B3CB98E00554893 /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9602F61B3CB98E00554893 /* PragmaticTweetsTests.swift */; };
 		5F9603021B3CB98F00554893 /* PragmaticTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9603011B3CB98F00554893 /* PragmaticTweetsUITests.swift */; };
+		F26CF7381B3E991F00910664 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F26CF73A1B3E991F00910664 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,10 @@
 		5F9602FD1B3CB98F00554893 /* PragmaticTweetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9603011B3CB98F00554893 /* PragmaticTweetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsUITests.swift; sourceTree = "<group>"; };
 		5F9603031B3CB98F00554893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26CF7331B3E90CB00910664 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		F26CF7341B3E90CB00910664 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F26CF7391B3E991F00910664 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F26CF73B1B3E994000910664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 		5F9602D51B3CB98E00554893 = {
 			isa = PBXGroup;
 			children = (
+				F26CF7351B3E985300910664 /* Supporting Files */,
 				5F9602E01B3CB98E00554893 /* PragmaticTweets */,
 				5F9602F51B3CB98E00554893 /* PragmaticTweetsTests */,
 				5F9603001B3CB98F00554893 /* PragmaticTweetsUITests */,
@@ -123,6 +129,14 @@
 				5F9603031B3CB98F00554893 /* Info.plist */,
 			);
 			path = PragmaticTweetsUITests;
+			sourceTree = "<group>";
+		};
+		F26CF7351B3E985300910664 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F26CF73A1B3E991F00910664 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F9602EC1B3CB98E00554893 /* LaunchScreen.storyboard in Resources */,
+				F26CF7381B3E991F00910664 /* Localizable.strings in Resources */,
 				5F9602E91B3CB98E00554893 /* Assets.xcassets in Resources */,
 				5F9602E71B3CB98E00554893 /* Main.storyboard in Resources */,
 			);
@@ -297,6 +312,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5F9602E61B3CB98E00554893 /* Base */,
+				F26CF7331B3E90CB00910664 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -305,8 +321,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				5F9602EB1B3CB98E00554893 /* Base */,
+				F26CF7341B3E90CB00910664 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F26CF73A1B3E991F00910664 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F26CF7391B3E991F00910664 /* fr */,
+				F26CF73B1B3E994000910664 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -486,6 +512,7 @@
 				5F9603081B3CB98F00554893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F9603091B3CB98F00554893 /* Build configuration list for PBXNativeTarget "PragmaticTweetsTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +521,7 @@
 				5F96030B1B3CB98F00554893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F96030C1B3CB98F00554893 /* Build configuration list for PBXNativeTarget "PragmaticTweetsUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +530,7 @@
 				5F96030E1B3CB98F00554893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
