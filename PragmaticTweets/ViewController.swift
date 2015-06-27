@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
-            let tweetVC = SLComposeViewController (forServiceType: SLServiceTypeTwitter)
+            let tweetVC = SLComposeViewController (forServiceType: SLServiceTypeTwitter)            
             tweetVC.setInitialText("I just finished the first project in iOS 8 SDK Development. #pragsios8")
             presentViewController(tweetVC, animated: true, completion: nil)
         } else {
