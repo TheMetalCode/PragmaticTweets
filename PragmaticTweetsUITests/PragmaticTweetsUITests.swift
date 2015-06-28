@@ -10,33 +10,25 @@ import Foundation
 import XCTest
 
 class PragmaticTweetsUITests: XCTestCase {
-        
+    
+    var app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app.launch()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let app = XCUIApplication()
-        print (app.buttons["Tweet It Out"].exists)
-        app.buttons["Tweet It Out"].tap()
-        print (app.navigationBars["Twitter"].exists)
-        app.tables.textViews["I just finished the first project in iOS 8 SDK Development. #pra"].tap()
-        app.navigationBars["Twitter"].buttons["Cancel"].tap()
-        
+    func testSmoke() {
+        let seeMyTweetsButton = app.buttons["See My Tweets"]
+        let tweetItOutButton = app.buttons["Tweet It Out"]
+        let twitterWebView = app.descendantsMatchingType(.Unknown)["main"].childrenMatchingType(.Unknown).elementAtIndex(3).staticTexts["@DeployMonkey"]
+        XCTAssertTrue(seeMyTweetsButton.enabled, "See My Tweets Not Enabled")
+        XCTAssertTrue(tweetItOutButton.enabled, "Tweet It Out Not Enabled")
+        XCTAssertTrue(twitterWebView.enabled, "Twitter Web View Not Loaded")        
     }
-    
 }
