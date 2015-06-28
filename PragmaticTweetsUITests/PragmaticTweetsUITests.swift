@@ -30,6 +30,13 @@ class PragmaticTweetsUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        print (app.buttons["Tweet It Out"].exists)
+        app.buttons["Tweet It Out"].tap()
+        print (app.navigationBars["Twitter"].exists)
+        app.tables.textViews["I just finished the first project in iOS 8 SDK Development. #pra"].tap()
+        app.navigationBars["Twitter"].buttons["Cancel"].tap()
+        
     }
     
 }
